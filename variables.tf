@@ -98,6 +98,10 @@ variable "is_auto_scaling_enabled" {
   default = false
 }
 
+variable "is_local_data_guard_enabled" {
+  default = false
+}
+
 variable "adb_wallet_password_specials" {
   default = true
 }
