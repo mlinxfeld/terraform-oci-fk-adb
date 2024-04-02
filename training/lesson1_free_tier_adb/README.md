@@ -1,15 +1,15 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 2 - Creating Free Tier Autonomous DB Shared with IP Whitelisting
+## LESSON 1 - Creating Free Tier Autonomous DB Shared
 
-In this lesson, we'll set up a Free Tier Autonomous Database and implement IP whitelisting, including our public IP address. This approach will restrict access to the publicly available database exclusively to our laptop.
+In this lesson, we'll set up a Free Tier Autonomous Database.
 
 ![](lesson2_free_tier_adb_with_ip_whitelisting.png)
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson2.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson1.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
@@ -39,22 +39,21 @@ martin_lin@codeeditor:~ (eu-frankfurt-1)$ git clone https://github.com/mlinxfeld
 
 martin_lin@codeeditor:~ (eu-frankfurt-1)$ cd terraform-oci-fk-adb
 
-martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson2_free_tier_adb_with_ip_whitelisting/
+martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson1_free_tier_adb/
 ```
 
 ### Prerequisites
 Create environment file with terraform.tfvars file starting with example file:
 
 ```
-martin_lin@codeeditor:lesson2_free_tier_adb_with_ip_whitelisting (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
+martin_lin@codeeditor:lesson1_free_tier_adb (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
 
-martin_lin@codeeditor:lesson2_free_tier_adb_with_ip_whitelisting (eu-frankfurt-1)$ vi terraform.tfvars
+martin_lin@codeeditor:lesson1_free_tier_adb (eu-frankfurt-1)$ vi terraform.tfvars
 
 tenancy_ocid       = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
 compartment_ocid   = "ocid1.compartment.oc1..<your_comparment_ocid>"
 region             = "<oci_region>"
 adb_password       = "<adb_password>"
-my_public_ip       = "<my_public_ip>" # check at https://whatismyipaddress.com/
 ```
 
 ### Initialize Terraform
@@ -62,7 +61,7 @@ my_public_ip       = "<my_public_ip>" # check at https://whatismyipaddress.com/
 Run the following command to initialize Terraform environment:
 
 ```
-martin_lin@codeeditor:lesson2_free_tier_adb_with_ip_whitelisting (eu-frankfurt-1)$ terraform init
+martin_lin@codeeditor:lesson1_free_tier_adb (eu-frankfurt-1)$ terraform init
 
 Initializing the backend...
 Initializing modules...
@@ -97,7 +96,7 @@ commands will detect it and remind you to do so if necessary.
 Run the following command for applying changes with the proposed plan:
 
 ```
-martin_lin@codeeditor:lesson2_free_tier_adb_with_ip_whitelisting (eu-frankfurt-1)$ terraform apply
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ terraform apply
 erraform used the selected providers to generate the following execution plan.
 Resource actions are indicated with the following symbols:
   + create
@@ -256,7 +255,7 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 Run the following command for destroying all resources:
 
 ```
-martin_lin@codeeditor:lesson2_free_tier_adb_with_ip_whitelisting (eu-frankfurt-1)$ terraform destroy 
+martin_lin@codeeditor:lesson1_free_tier_adb (eu-frankfurt-1)$ terraform destroy 
 module.oci-fk-adb.random_password.wallet_password: Refreshing state... [id=none]
 (...)
 
