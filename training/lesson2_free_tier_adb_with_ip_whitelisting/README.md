@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 4 - Creating Free Tier Autonomous DB Shared with IP Whitelisting
+## LESSON 2 - Creating Free Tier Autonomous DB Shared with IP Whitelisting
 
 In this lesson, we'll set up a Free Tier Autonomous Database and implement IP whitelisting, including our public IP address. This approach will restrict access to the publicly available database exclusively to our laptop.
 
