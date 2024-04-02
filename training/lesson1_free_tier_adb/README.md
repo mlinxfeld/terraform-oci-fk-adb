@@ -96,7 +96,7 @@ commands will detect it and remind you to do so if necessary.
 Run the following command for applying changes with the proposed plan:
 
 ```
-martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ terraform apply
+martin_lin@codeeditor:lesson1_free_tier_adb (eu-frankfurt-1)$ terraform apply
 erraform used the selected providers to generate the following execution plan.
 Resource actions are indicated with the following symbols:
   + create
