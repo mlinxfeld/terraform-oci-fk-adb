@@ -5,7 +5,7 @@
 
 In this lesson, we'll set up a Free Tier Autonomous Database.
 
-![](lesson2_free_tier_adb_with_ip_whitelisting.png)
+![](lesson1_free_tier_adb.png)
 
 ## Deploy Using Oracle Resource Manager
 
