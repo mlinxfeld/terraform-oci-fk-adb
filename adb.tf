@@ -38,3 +38,11 @@ resource "oci_database_autonomous_database_wallet" "fk_adb_database_wallet" {
   password               = random_password.wallet_password.result
   base64_encode_content  = "true"
 }
+
+resource "oci_database_autonomous_database_backup" "fk_adb_database_backup" {
+    count                    = var.adb_backup_enabled ? 1 : 0
+    autonomous_database_id   = oci_database_autonomous_database.fk_adb_database.id
+    display_name             = var.adb_backup_display_name
+    is_long_term_backup      = var.adb_backup_is_long_term_backup
+    retention_period_in_days = var.adb_backup_retention_period_in_days
+}

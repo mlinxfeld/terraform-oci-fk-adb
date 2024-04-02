@@ -121,3 +121,18 @@ variable "adb_wallet_password_override_special" {
 variable "defined_tags" {
   default = {}
 }
+
+variable "adb_backup_enabled" {
+  default = false
+}
+variable "adb_backup_display_name" {
+  default = "FoggyKitchenADB_Backup"
+}
+
+variable "adb_backup_is_long_term_backup" {
+  default = true
+}
+
+variable "adb_backup_retention_period_in_days" {
+  default = 90
+}
