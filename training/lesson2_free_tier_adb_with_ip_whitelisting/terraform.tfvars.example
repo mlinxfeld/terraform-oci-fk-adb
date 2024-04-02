@@ -11,4 +11,4 @@ compartment_ocid = "<compartment_ocid>"
 adb_password = "<adb_password>"
 
 # my_public_ip
-my_public_ip = "<my_public_ip>" # check on https://whatismyipaddress.com/
+my_public_ip = "<my_public_ip>" # check at https://whatismyipaddress.com/
