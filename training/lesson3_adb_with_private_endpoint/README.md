@@ -1,15 +1,15 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 4 - Creating Autonomous DB Shared with Local Disaster Recovery
+## LESSON 4 - Creating Autonomous DB Shared with Private Endpoint
 
-In this lesson, we'll delve into the creation of an Oracle Autonomous Database (ADB) with a focus on incorporating local disaster recovery, ensuring your data remains secure and accessible, even during local infrastructure failures. 
+In Lesson 3, we explore the intricacies of setting up an Oracle Autonomous Database (ADB) with a private endpoint, focusing on enhancing security and network isolation. This lesson provides step-by-step instructions on configuring your ADB instance in Oracle Cloud Infrastructure (OCI) to use private endpoints, ensuring secure, internal access to your database without exposure to the public internet. 
 
-![](lesson4_adb_with_local_disaster_recovery.png)
+![](lesson3_adb_with_private_endpoint.png)
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson4.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson5.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
@@ -39,16 +39,16 @@ martin_lin@codeeditor:~ (eu-frankfurt-1)$ git clone https://github.com/mlinxfeld
 
 martin_lin@codeeditor:~ (eu-frankfurt-1)$ cd terraform-oci-fk-adb
 
-martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson4_adb_with_local_disaster_recovery/
+martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson3_adb_with_private_endpoint/
 ```
 
 ### Prerequisites
 Create environment file with terraform.tfvars file starting with example file:
 
 ```
-martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
 
-martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ vi terraform.tfvars
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ vi terraform.tfvars
 
 tenancy_ocid       = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
 compartment_ocid   = "ocid1.compartment.oc1..<your_comparment_ocid>"
@@ -61,7 +61,7 @@ adb_password       = "<adb_password>"
 Run the following command to initialize Terraform environment:
 
 ```
-martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ terraform init
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ terraform init
 
 Initializing the backend...
 Initializing modules...
@@ -96,7 +96,7 @@ commands will detect it and remind you to do so if necessary.
 Run the following command for applying changes with the proposed plan:
 
 ```
-martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ terraform apply
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ terraform apply
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Read complete after 0s [id=CoreServicesDataSource-0]
 
@@ -183,7 +183,7 @@ Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
 Run the following command for destroying all resources:
 
 ```
-martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ terraform destroy 
+martin_lin@codeeditor:lesson3_adb_with_private_endpoint (eu-frankfurt-1)$ terraform destroy 
 module.oci-fk-adb.random_password.wallet_password: Refreshing state... [id=none]
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
 module.oci-fk-adb.oci_core_vcn.fk_adb_vcn[0]: Refreshing state... [id=ocid1.vcn.oc1.eu-frankfurt-1.amaaaaaadngk4giaak76a4mrugw77uydl3caqh4xbwetopo6snh4vmmnjifq]
