@@ -9,7 +9,7 @@ In this lesson, we'll delve into the creation of an Oracle Autonomous Database (
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-oke/releases/latest/download/terraform-oci-fk-adb-lesson4.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson4.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
@@ -35,11 +35,11 @@ Now, you'll want a local copy of this repo. You can make that with the commands:
 Clone the repo from github by executing the command as follows and then go to proper subdirectory:
 
 ```
-martin_lin@codeeditor:~ (eu-frankfurt-1)$ git clone https://github.com/mlinxfeld/terraform-oci-fk-oke.git
+martin_lin@codeeditor:~ (eu-frankfurt-1)$ git clone https://github.com/mlinxfeld/terraform-oci-fk-adb.git
 
-martin_lin@codeeditor:~ (eu-frankfurt-1)$ cd terraform-oci-fk-oke
+martin_lin@codeeditor:~ (eu-frankfurt-1)$ cd terraform-oci-fk-adb
 
-martin_lin@codeeditor:terraform-oci-fk-oke (eu-frankfurt-1)$ cd training/lesson4_adb_with_local_disaster_recovery/
+martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson4_adb_with_local_disaster_recovery/
 ```
 
 ### Prerequisites
@@ -65,8 +65,8 @@ martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$
 
 Initializing the backend...
 Initializing modules...
-Downloading git::https://github.com/mlinxfeld/terraform-oci-fk-adb.git for fk-oke...
-- fk-oke in .terraform/modules/fk-adb
+Downloading git::https://github.com/mlinxfeld/terraform-oci-fk-adb.git for fk-adb...
+- fk-adb in .terraform/modules/fk-adb
 
 Initializing provider plugins...
 - Reusing previous version of oracle/oci from the dependency lock file
