@@ -176,11 +176,13 @@ module.oci-fk-adb.oci_database_autonomous_database_wallet.fk_adb_database_wallet
 
 Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
 
+```
 
+### Destroy the changes 
 
+Run the following command for destroying all resources:
 
-
-
+```
 martin_lin@codeeditor:lesson4_adb_with_local_disaster_recovery (eu-frankfurt-1)$ terraform destroy 
 module.oci-fk-adb.random_password.wallet_password: Refreshing state... [id=none]
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
@@ -239,3 +241,4 @@ module.oci-fk-adb.oci_core_vcn.fk_adb_vcn[0]: Destroying... [id=ocid1.vcn.oc1.eu
 module.oci-fk-adb.oci_core_vcn.fk_adb_vcn[0]: Destruction complete after 1s
 
 Destroy complete! Resources: 11 destroyed.
+```
