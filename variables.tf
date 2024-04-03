@@ -147,3 +147,15 @@ variable "vault_id" {
 variable "kms_key_id" {
   default = ""
 }
+
+variable "source_type" {
+  default = "NONE" # Options: NONE, DATABASE, CLONE_TO_REFRESHABLE, BACKUP_FROM_ID, BACKUP_FROM_TIMESTAMP, CROSS_REGION_DATAGUARD
+}
+
+variable "source_id" {
+  default = ""
+}
+
+variable "clone_type" {
+  default = "" # Options: FULL, METADATA
+}

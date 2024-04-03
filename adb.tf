@@ -26,6 +26,9 @@ resource "oci_database_autonomous_database" "fk_adb_database" {
   private_endpoint_label      = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
   subnet_id                   = var.adb_private_endpoint ? local.adb_subnet_id : null
   defined_tags                = var.defined_tags
+  source                      = var.source_type
+  source_id                   = var.source_id
+  clone_type                  = var.clone_type          
 }
 
 resource "random_password" "wallet_password" {

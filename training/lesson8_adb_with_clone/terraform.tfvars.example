@@ -1,0 +1,14 @@
+# Authentication
+tenancy_ocid         = "<tenancy_ocid>"
+
+# Region
+region = "<region>"
+
+# Compartment
+compartment_ocid = "<compartment_ocid>"
+
+# ADB_password 
+adb_password = "<adb_password>"
+
+# my_public_ip
+my_public_ip = "<my_public_ip>" # check on https://whatismyipaddress.com/
