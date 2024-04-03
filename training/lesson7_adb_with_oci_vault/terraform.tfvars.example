@@ -1,0 +1,15 @@
+# Authentication
+tenancy_ocid = "<tenancy_ocid>"
+
+# Region
+region = "<region>"
+
+# Compartment
+compartment_ocid = "<compartment_ocid>"
+
+# ADB_password 
+adb_password = "<adb_password>"
+
+# OCI Vault  
+vault_id = "<vault_ocid>"
+kms_key_id = "<kms_key_id>"

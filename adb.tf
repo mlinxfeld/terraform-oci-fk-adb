@@ -5,6 +5,8 @@ locals {
 
 resource "oci_database_autonomous_database" "fk_adb_database" {
   admin_password              = var.adb_password
+  vault_id                    = var.use_oci_vault ? var.vault_id : null
+  kms_key_id                  = var.use_oci_vault ? var.kms_key_id : null
   compartment_id              = var.compartment_ocid
   cpu_core_count              = var.adb_database_cpu_core_count
   data_storage_size_in_tbs    = var.adb_database_data_storage_size_in_tbs

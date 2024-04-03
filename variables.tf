@@ -136,3 +136,14 @@ variable "adb_backup_is_long_term_backup" {
 variable "adb_backup_retention_period_in_days" {
   default = 90
 }
+
+variable "use_oci_vault" {
+  default = false    
+}
+variable "vault_id" {
+  default = ""
+}
+
+variable "kms_key_id" {
+  default = ""
+}
