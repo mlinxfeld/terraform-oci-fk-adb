@@ -28,7 +28,8 @@ resource "oci_database_autonomous_database" "fk_adb_database" {
   defined_tags                = var.defined_tags
   source                      = var.source_type
   source_id                   = var.source_id
-  clone_type                  = var.clone_type          
+  clone_type                  = var.clone_type
+  refreshable_mode            = var.refreshable_mode          
 }
 
 resource "random_password" "wallet_password" {

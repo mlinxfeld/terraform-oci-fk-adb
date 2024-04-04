@@ -2,7 +2,9 @@ variable "compartment_ocid" {
   default = ""
 }
 
-variable "adb_password" {}
+variable "adb_password" {
+  default = ""
+}
 
 variable "use_existing_vcn" {
   default = true
@@ -158,4 +160,8 @@ variable "source_id" {
 
 variable "clone_type" {
   default = "" # Options: FULL, METADATA
+}
+
+variable "refreshable_mode" {
+  default = "" # Options: MANUAL vs AUTOMATIC
 }
