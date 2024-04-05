@@ -45,7 +45,7 @@ variables:
     required: true
     visibile: true
 
-   compartment_ocid:
+  compartment_ocid:
     title: "Compartment"
     description: "Choose Comparment for Autonomous Database Serverless"
     type: oci:identity:compartment:id
