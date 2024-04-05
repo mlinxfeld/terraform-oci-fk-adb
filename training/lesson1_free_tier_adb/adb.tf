@@ -1,6 +1,5 @@
 module "oci-fk-adb" {
-  #source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
-  source                                = "../../"
+  source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   adb_database_db_name                  = "FoggyKitchenFreeTierADB"
   adb_database_display_name             = "FoggyKitchenFreeTierADB"
   adb_password                          = var.adb_password

@@ -1,6 +1,5 @@
 module "oci-fk-adb-source" {
-  #source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
-  source                                = "../../"
+  source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   adb_database_db_name                  = "FoggyKitchenADBSource"
   adb_database_display_name             = "FoggyKitchenADB_Source"
   adb_password                          = var.adb_password
@@ -14,8 +13,7 @@ module "oci-fk-adb-source" {
 }
 
 module "oci-fk-adb-clone" {
-  #source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
-  source                                = "../../"
+  source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   adb_database_db_name                  = "FoggyKitchenADBFullClone"
   adb_database_display_name             = "FoggyKitchenADB_FullClone"
   adb_password                          = var.adb_password
