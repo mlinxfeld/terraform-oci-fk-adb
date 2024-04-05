@@ -1,0 +1,55 @@
+title: "FoggyKitchen Autonomous Database Serverless with Terraform - LESSON 1 - Creating Free Tier Autonomous DB Serverless."
+description: "This lesson guides you through the process of creating an Autonomous Database (ADB) Serverless on Oracle's Free Tier."
+stackDescription: "This lesson guides you through the process of creating an Autonomous Database (ADB) Serverless on Oracle's Free Tier."
+schemaVersion: 1.1.0
+version: "20201028"
+locale: "en"
+
+variableGroups:
+- title: "General Configuration"
+  visible: false
+  variables:
+  - tenancy_ocid
+  - region
+
+- title: "Required Configuration"
+  visible: true  
+  variables:
+  - compartment_ocid
+  - adb_password
+
+variables:
+
+  # General Configuration
+  tenancy_ocid:
+    title: "Tenancy ID"
+    description: "The Oracle Cloud Identifier (OCID) for your tenancy"
+    type: string
+    required: true
+    visibile: false
+
+  region:
+    title: "Region"
+    description: "Choose Region for your OCI OKE Basic Cluster"
+    type: oci:identity:region:name
+    required: true
+    visibile: true
+
+  adb_password:
+    title: "ADB ADMIN Password"
+    description: "Specify the password for Autonomous Database Serverless ADMIN user"
+    type: password
+    minLength: 12
+    maxLength: 30
+    pattern: ^[A-Za-z][A-Za-z0-9_#\$]+$     
+    required: true
+    visibile: true
+
+   compartment_ocid:
+    title: "Compartment"
+    description: "Choose Comparment for Autonomous Database Serverless"
+    type: oci:identity:compartment:id
+    required: true
+    visibile: true 
+
+  
