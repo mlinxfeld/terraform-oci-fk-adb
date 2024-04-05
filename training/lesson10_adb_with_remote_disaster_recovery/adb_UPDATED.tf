@@ -4,7 +4,7 @@ module "oci-fk-adb-primary" {
   }
   #source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   source                                = "../../"
-  adb_database_db_name                  = "FoggyKitchenADBSource"
+  adb_database_db_name                  = "FoggyKitchenADB"
   adb_database_display_name             = "FoggyKitchenADB_Source"
   adb_password                          = var.adb_password
   adb_database_db_workload              = "OLTP" # Autonomous Transaction Processing (ATP)
@@ -22,7 +22,7 @@ module "oci-fk-adb-remote-standby" {
   }
   #source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   source                                = "../../"
-  adb_database_db_name                  = "FoggyKitchenADBSource"
+  adb_database_db_name                  = "FoggyKitchenADB"
   adb_database_display_name             = "FoggyKitchenADB_Standby"
   adb_database_db_workload              = "OLTP" # Autonomous Transaction Processing (ATP)
   adb_free_tier                         = false
