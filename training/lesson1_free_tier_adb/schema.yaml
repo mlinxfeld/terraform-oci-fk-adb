@@ -23,21 +23,21 @@ variables:
   # General Configuration
   tenancy_ocid:
     title: "Tenancy ID"
-    description: "The Oracle Cloud Identifier (OCID) for your tenancy"
+    description: "The Oracle Cloud Identifier (OCID) for your OCI tenancy"
     type: string
     required: true
     visibile: false
 
   region:
     title: "Region"
-    description: "Choose Region for your OCI OKE Basic Cluster"
+    description: "Choose Region for your OCI Autonomous Database Serverless"
     type: oci:identity:region:name
     required: true
     visibile: true
 
   adb_password:
     title: "ADB ADMIN Password"
-    description: "Specify the password for Autonomous Database Serverless ADMIN user"
+    description: "Specify the password for OCI Autonomous Database Serverless ADMIN user"
     type: password
     minLength: 12
     maxLength: 30
@@ -47,7 +47,7 @@ variables:
 
   compartment_ocid:
     title: "Compartment"
-    description: "Choose Comparment for Autonomous Database Serverless"
+    description: "Choose Comparment for OCI Autonomous Database Serverless"
     type: oci:identity:compartment:id
     required: true
     visibile: true 
