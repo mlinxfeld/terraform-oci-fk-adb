@@ -4,32 +4,33 @@ locals {
 }
 
 resource "oci_database_autonomous_database" "fk_adb_database" {
-  admin_password              = var.adb_password
-  vault_id                    = var.use_oci_vault ? var.vault_id : null
-  kms_key_id                  = var.use_oci_vault ? var.kms_key_id : null
-  compartment_id              = var.compartment_ocid
-  cpu_core_count              = var.adb_database_cpu_core_count
-  data_storage_size_in_tbs    = var.adb_database_data_storage_size_in_tbs
-  db_name                     = var.adb_database_db_name
-  db_version                  = var.adb_database_db_version
-  data_safe_status            = var.adb_data_safe_status
-  db_workload                 = var.adb_database_db_workload
-  display_name                = var.adb_database_display_name
-  freeform_tags               = var.adb_database_freeform_tags
-  license_model               = var.adb_database_license_model
-  is_free_tier                = var.adb_free_tier
-  is_data_guard_enabled       = var.is_data_guard_enabled
-  is_auto_scaling_enabled     = var.is_auto_scaling_enabled
-  is_local_data_guard_enabled = var.is_local_data_guard_enabled
-  whitelisted_ips             = var.adb_private_endpoint ? null : var.whitelisted_ips
-  nsg_ids                     = var.adb_private_endpoint ? [local.adb_nsg_id] : null
-  private_endpoint_label      = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
-  subnet_id                   = var.adb_private_endpoint ? local.adb_subnet_id : null
-  defined_tags                = var.defined_tags
-  source                      = var.source_type
-  source_id                   = var.source_id
-  clone_type                  = var.clone_type
-  refreshable_mode            = var.refreshable_mode          
+  admin_password                = var.adb_password
+  vault_id                      = var.use_oci_vault ? var.vault_id : null
+  kms_key_id                    = var.use_oci_vault ? var.kms_key_id : null
+  compartment_id                = var.compartment_ocid
+  cpu_core_count                = var.adb_database_cpu_core_count
+  data_storage_size_in_tbs      = var.adb_database_data_storage_size_in_tbs
+  db_name                       = var.adb_database_db_name
+  db_version                    = var.adb_database_db_version
+  data_safe_status              = var.adb_data_safe_status
+  db_workload                   = var.adb_database_db_workload
+  display_name                  = var.adb_database_display_name
+  freeform_tags                 = var.adb_database_freeform_tags
+  license_model                 = var.adb_database_license_model
+  is_free_tier                  = var.adb_free_tier
+  is_data_guard_enabled         = var.is_data_guard_enabled
+  is_auto_scaling_enabled       = var.is_auto_scaling_enabled
+  is_local_data_guard_enabled   = var.is_local_data_guard_enabled
+  whitelisted_ips               = var.adb_private_endpoint ? null : var.whitelisted_ips
+  nsg_ids                       = var.adb_private_endpoint ? [local.adb_nsg_id] : null
+  private_endpoint_label        = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
+  subnet_id                     = var.adb_private_endpoint ? local.adb_subnet_id : null
+  defined_tags                  = var.defined_tags
+  source                        = var.source_type
+  source_id                     = var.source_id
+  clone_type                    = var.clone_type
+  refreshable_mode              = var.refreshable_mode          
+  remote_disaster_recovery_type = var.remote_disaster_recovery_type
 }
 
 resource "random_password" "wallet_password" {

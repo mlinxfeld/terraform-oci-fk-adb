@@ -165,3 +165,7 @@ variable "clone_type" {
 variable "refreshable_mode" {
   default = "" # Options: MANUAL vs AUTOMATIC
 }
+
+variable "remote_disaster_recovery_type" {
+  default = ""  # Options: BACKUP_BASED, SNAPSHOT_STANDBY or ADG
+}
