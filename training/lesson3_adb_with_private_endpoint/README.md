@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 3 - Creating Autonomous DB Shared with Private Endpoint
+## LESSON 3 - Creating Autonomous DB Serverless with Private Endpoint
 
 In Lesson 3, we explore the intricacies of setting up an Oracle Autonomous Database (ADB) with a private endpoint, focusing on enhancing security and network isolation. This lesson provides step-by-step instructions on configuring your ADB instance in Oracle Cloud Infrastructure (OCI) to use private endpoints, ensuring secure, internal access to your database without exposure to the public internet. 
 

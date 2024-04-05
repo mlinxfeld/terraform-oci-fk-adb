@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 6 - Creating Autonomous DB Shared with Manual Backup
+## LESSON 6 - Creating Autonomous DB Serverless with Manual Backup
 
 In this lesson, we'll focus on configuring an Autonomous Database with manual backup capabilities.
 

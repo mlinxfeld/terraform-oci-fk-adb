@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 9 - Creating Autonomous DB Shared with Refreshable Clone
+## LESSON 9 - Creating Autonomous DB Serverless with Refreshable Clone
 
 This lesson introduces the advanced concept of creating a refreshable clone in an Autonomous Database Shared environment, emphasizing the critical role of such clones in maintaining data currency and supporting development efforts with minimal downtime. This module guides learners through the process of setting up a refreshable clone, which allows for the periodic synchronization of data from the source database, ensuring that the clone remains up-to-date with the latest changes. 
 

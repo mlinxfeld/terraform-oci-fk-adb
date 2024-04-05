@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 10 - Creating Autonomous DB Shared with Remote Standby (Disaster Recovery)
+## LESSON 10 - Creating Autonomous DB Serverless with Remote Standby (Disaster Recovery)
 
 This lesson explores the essential techniques for setting up an Autonomous Database (ADB) with shared resources, focusing on the implementation of a remote standby database for disaster recovery without utilizing DataGuard technology. 
 
@@ -97,7 +97,7 @@ commands will detect it and remind you to do so if necessary.
 Run the following command for applying changes with the proposed plan:
 
 ```
-martin_lin@codeeditor:lesson9_adb_with_refreshable_clone (eu-frankfurt-1)$ terraform apply
+martin_lin@codeeditor:lesson10_adb_with_remote_disaster_recovery (eu-frankfurt-1)$ terraform apply
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Read complete after 0s [id=CoreServicesDataSource-0]
 

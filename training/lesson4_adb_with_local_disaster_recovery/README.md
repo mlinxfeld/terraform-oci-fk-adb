@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 4 - Creating Autonomous DB Shared with Local Disaster Recovery
+## LESSON 4 - Creating Autonomous DB Serverless with Local Disaster Recovery
 
 In this lesson, we'll delve into the creation of an Oracle Autonomous Database (ADB) with a focus on incorporating local disaster recovery, ensuring your data remains secure and accessible, even during local infrastructure failures. 
 

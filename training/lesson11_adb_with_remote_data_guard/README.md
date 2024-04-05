@@ -1,15 +1,15 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 8 - Creating Autonomous DB Serverless with Full Clone
+## LESSON 11 - Creating Autonomous DB Serverless with Remote Standby (DataGuard-based)
 
-This lesson focuses on the process of creating an Autonomous Database Shared instance by leveraging the cloning feature, an essential technique for database management and scalability. It outlines the steps to efficiently clone an existing database, allowing for the quick deployment of test environments or the replication of data for analytical purposes. Through hands-on exercises, participants will learn to utilize the cloning capabilities to enhance their database infrastructure, ensuring seamless data management and operational continuity in Oracle Cloud Infrastructure.
+This lesson explores the essential techniques for setting up an Autonomous Database (ADB) with shared resources, focusing on the implementation of a remote standby database for disaster recovery utilizing DataGuard technology. 
 
-![](lesson8_adb_with_clone.png)
+![](lesson11_adb_with_remote_data_guard.png)
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson8.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/mlinxfeld/terraform-oci-fk-adb/releases/latest/download/terraform-oci-fk-adb-lesson11.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
@@ -39,20 +39,21 @@ martin_lin@codeeditor:~ (eu-frankfurt-1)$ git clone https://github.com/mlinxfeld
 
 martin_lin@codeeditor:~ (eu-frankfurt-1)$ cd terraform-oci-fk-adb
 
-martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson8_adb_with_clone/
+martin_lin@codeeditor:terraform-oci-fk-adb (eu-frankfurt-1)$ cd training/lesson11_adb_with_remote_data_guard/
 ```
 
 ### Prerequisites
 Create environment file with terraform.tfvars file starting with example file:
 
 ```
-martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
+martin_lin@codeeditor:lesson11_adb_with_remote_data_guard (eu-frankfurt-1)$ cp terraform.tfvars.example terraform.tfvars
 
-martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ vi terraform.tfvars
+martin_lin@codeeditor:lesson11_adb_with_remote_data_guard (eu-frankfurt-1)$ vi terraform.tfvars
 
 tenancy_ocid       = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
 compartment_ocid   = "ocid1.compartment.oc1..<your_comparment_ocid>"
-region             = "<oci_region>"
+primary_region     = "<primary_region>"
+standby_region     = "<standby_region>"
 adb_password       = "<adb_password>"
 ```
 
@@ -61,7 +62,7 @@ adb_password       = "<adb_password>"
 Run the following command to initialize Terraform environment:
 
 ```
-martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ terraform init
+martin_lin@codeeditor:lesson11_adb_with_remote_data_guard (eu-frankfurt-1)$ terraform init
 
 Initializing the backend...
 Initializing modules...
@@ -96,7 +97,7 @@ commands will detect it and remind you to do so if necessary.
 Run the following command for applying changes with the proposed plan:
 
 ```
-martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ terraform apply
+martin_lin@codeeditor:lesson11_adb_with_remote_data_guard (eu-frankfurt-1)$ terraform apply
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Read complete after 0s [id=CoreServicesDataSource-0]
 
@@ -165,7 +166,7 @@ Apply complete! Resources: 22 added, 0 changed, 0 destroyed.
 Run the following command for destroying all resources:
 
 ```
-martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ terraform destroy 
+martin_lin@codeeditor:lesson11_adb_with_remote_data_guard (eu-frankfurt-1)$ terraform destroy 
 module.oci-fk-adb.random_password.wallet_password: Refreshing state... [id=none]
 module.oci-fk-adb.data.oci_core_services.AllOCIServices[0]: Reading...
 module.oci-fk-adb.oci_core_vcn.fk_adb_vcn[0]: Refreshing state... [id=ocid1.vcn.oc1.eu-frankfurt-1.amaaaaaadngk4giaak76a4mrugw77uydl3caqh4xbwetopo6snh4vmmnjifq]

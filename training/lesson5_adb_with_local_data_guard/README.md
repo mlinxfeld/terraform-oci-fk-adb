@@ -1,7 +1,7 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 5 - Creating Autonomous DB Shared with Local Data Guard
+## LESSON 5 - Creating Autonomous DB Serverless with Local Data Guard
 
 In this lesson, we'll delve into the creation of an Oracle Autonomous Database (ADB) with a focus on incorporating local Data Guard, ensuring your data remains secure and accessible, even during local infrastructure failures. 
 
