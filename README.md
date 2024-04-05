@@ -1,6 +1,6 @@
 # terraform-oci-fk-adb
 
-These is Terraform module that deploys [Autonmous Database Serverless)](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/) on [Oracle Cloud Infrastructure (OCI)](https://cloud.oracle.com/en_US/cloud-infrastructure).
+These is Terraform module that deploys [Autonmous Database Serverless](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/) on [Oracle Cloud Infrastructure (OCI)](https://cloud.oracle.com/en_US/cloud-infrastructure).
 
 ## About
 Oracle Autonomous Database Serverless is a comprehensive, fully managed database solution designed to simplify the development and deployment of applications for organizations of any size and complexity. It stands out as the sole cloud database service capable of catering to a wide spectrum of requirements, from straightforward self-service analytics to intricate, high-volume data management applications. This versatile platform seamlessly accommodates various types of workloads, including Data Warehousing, Transaction Processing, JSON-centric applications, and development through Oracle APEX's Low Code platform, ensuring a broad range of use cases can be efficiently addressed.
