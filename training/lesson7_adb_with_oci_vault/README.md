@@ -3,7 +3,7 @@
 
 ## LESSON 7 - Creating Autonomous DB Serverless integrated with OCI Vault
 
-Lesson 7 delves into the intricacies of setting up an Autonomous Database Shared instance, emphasizing the integration with OCI Vault for top-tier security alignment with organizational policies. It meticulously covers how to configure OCI Vault to serve as a repository for customer-managed encryption keys, a critical step for organizations that mandate direct control over their encryption mechanisms. The lesson clarifies the process whereby the Autonomous Database employs the customer-managed master encryption key stored in OCI Vault to generate the Transparent Data Encryption (TDE) master key, ensuring data is encrypted under the organization's governance. 
+This lesson delves into the intricacies of setting up an Autonomous Database Shared instance, emphasizing the integration with OCI Vault for top-tier security alignment with organizational policies. It meticulously covers how to configure OCI Vault to serve as a repository for customer-managed encryption keys, a critical step for organizations that mandate direct control over their encryption mechanisms. The lesson clarifies the process whereby the Autonomous Database employs the customer-managed master encryption key stored in OCI Vault to generate the Transparent Data Encryption (TDE) master key, ensuring data is encrypted under the organization's governance. 
 
 ![](lesson7_adb_with_oci_vault.png)
 

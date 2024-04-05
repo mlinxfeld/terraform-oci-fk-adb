@@ -1,9 +1,9 @@
 
 # FoggyKitchen OCI Autonomous Database with Terraform 
 
-## LESSON 1 - Creating Free Tier Autonomous DB Shared
+## LESSON 1 - Creating Free Tier Autonomous DB Serverless
 
-In this lesson, we'll set up a Free Tier Autonomous Database.
+This lesson guides you through the process of creating an Autonomous Database (ADB) Serverless on Oracle's Free Tier, offering a practical start for users seeking cost-effective solutions without compromising on capabilities. 
 
 ![](lesson1_free_tier_adb.png)
 

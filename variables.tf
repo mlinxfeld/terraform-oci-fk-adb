@@ -92,10 +92,6 @@ variable "whitelisted_ips" {
   default = [""]
 }
 
-variable "is_data_guard_enabled" {
-  default = false
-}
-
 variable "is_auto_scaling_enabled" {
   default = false
 }

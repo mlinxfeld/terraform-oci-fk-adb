@@ -18,7 +18,6 @@ resource "oci_database_autonomous_database" "fk_adb_database" {
   freeform_tags                 = var.adb_database_freeform_tags
   license_model                 = var.adb_database_license_model
   is_free_tier                  = var.adb_free_tier
-  is_data_guard_enabled         = var.is_data_guard_enabled
   is_auto_scaling_enabled       = var.is_auto_scaling_enabled
   is_local_data_guard_enabled   = var.is_local_data_guard_enabled
   whitelisted_ips               = var.adb_private_endpoint ? null : var.whitelisted_ips
