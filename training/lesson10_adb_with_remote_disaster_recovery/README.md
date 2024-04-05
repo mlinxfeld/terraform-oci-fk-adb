@@ -5,7 +5,7 @@
 
 This lesson explores the essential techniques for setting up an Autonomous Database (ADB) with shared resources, focusing on the implementation of a remote standby database for disaster recovery without utilizing DataGuard technology. 
 
-![](lesson10_adb_with_remote_disaster_recovery .png)
+![](lesson10_adb_with_remote_disaster_recovery.png)
 
 ## Deploy Using Oracle Resource Manager
 
