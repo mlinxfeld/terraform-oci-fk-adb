@@ -10,6 +10,6 @@ module "oci-fk-adb" {
   compartment_ocid                      = var.compartment_ocid
   use_existing_vcn                      = false
   adb_private_endpoint                  = true
-  adb_backup_enabled                    = true
+  adb_backup_enabled                    = var.adb_backup_enabled
 }
 

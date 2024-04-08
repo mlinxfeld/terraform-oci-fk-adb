@@ -5,3 +5,6 @@ variable "compartment_ocid" {}
 variable "region" {}
 #variable "fingerprint" {}
 variable "adb_password" {}
+variable "adb_backup_enabled" {
+  default = true
+}
