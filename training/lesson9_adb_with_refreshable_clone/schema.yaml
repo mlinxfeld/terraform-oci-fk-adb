@@ -1,0 +1,67 @@
+title: "FoggyKitchen Autonomous Database Serverless with Terraform - LESSON 9 - Creating Autonomous DB Serverless with Refreshable Clone."
+description: "This lesson introduces the advanced concept of creating a refreshable clone in an Autonomous Database Shared environment, emphasizing the critical role of such clones in maintaining data currency and supporting development efforts with minimal downtime."
+stackDescription: "This lesson introduces the advanced concept of creating a refreshable clone in an Autonomous Database Shared environment, emphasizing the critical role of such clones in maintaining data currency and supporting development efforts with minimal downtime."
+schemaVersion: 1.1.0
+version: "20201028"
+locale: "en"
+
+variableGroups:
+- title: "General Configuration"
+  visible: false
+  variables:
+  - tenancy_ocid
+  - region
+
+- title: "Required Configuration"
+  visible: true  
+  variables:
+  - compartment_ocid
+  - adb_password
+  - refreshable_mode
+
+variables:
+
+  # General Configuration
+  tenancy_ocid:
+    title: "Tenancy ID"
+    description: "The Oracle Cloud Identifier (OCID) for your OCI tenancy"
+    type: string
+    required: true
+    visibile: false
+
+  region:
+    title: "Region"
+    description: "Choose Region for your OCI Autonomous Database Serverless"
+    type: oci:identity:region:name
+    required: true
+    visibile: true
+
+  adb_password:
+    title: "ADB ADMIN Password"
+    description: "Specify the password for OCI Autonomous Database Serverless ADMIN user"
+    type: password
+    minLength: 12
+    maxLength: 30
+    pattern: ^[A-Za-z][A-Za-z0-9_#\$]+$     
+    required: true
+    visibile: true
+
+  compartment_ocid:
+    title: "Compartment"
+    description: "Choose Comparment for OCI Autonomous Database Serverless"
+    type: oci:identity:compartment:id
+    required: true
+    visibile: true 
+
+  refreshable_mode:
+    title: "Refreshable Mode"
+    description: "Specify the mode of refreshable clone mode"
+    type: enum
+    default: "MANUAL"
+    enum:
+      - "MANUAL" 
+      - "AUTOMATIC"   
+    required: true
+    visibile: true
+
+  
