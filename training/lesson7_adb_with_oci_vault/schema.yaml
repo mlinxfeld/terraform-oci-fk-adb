@@ -1,0 +1,71 @@
+title: "FoggyKitchen Autonomous Database Serverless with Terraform - LESSON 7 - Creating Autonomous DB Serverless integrated with OCI Vault"
+description: "This lesson delves into the intricacies of setting up an Autonomous Database Shared instance, emphasizing the integration with OCI Vault for top-tier security alignment with organizational policies."
+stackDescription: "This lesson delves into the intricacies of setting up an Autonomous Database Shared instance, emphasizing the integration with OCI Vault for top-tier security alignment with organizational policies."
+schemaVersion: 1.1.0
+version: "20201028"
+locale: "en"
+
+variableGroups:
+- title: "General Configuration"
+  visible: false
+  variables:
+  - tenancy_ocid
+  - region
+
+- title: "Required Configuration"
+  visible: true  
+  variables:
+  - compartment_ocid
+  - adb_password
+  - vault_id
+  - kms_key_id
+
+variables:
+
+  # General Configuration
+  tenancy_ocid:
+    title: "Tenancy ID"
+    description: "The Oracle Cloud Identifier (OCID) for your OCI tenancy"
+    type: string
+    required: true
+    visibile: false
+
+  region:
+    title: "Region"
+    description: "Choose Region for your OCI Autonomous Database Serverless"
+    type: oci:identity:region:name
+    required: true
+    visibile: true
+
+  adb_password:
+    title: "ADB ADMIN Password"
+    description: "Specify the password for OCI Autonomous Database Serverless ADMIN user"
+    type: password
+    minLength: 12
+    maxLength: 30
+    pattern: ^[A-Za-z][A-Za-z0-9_#\$]+$     
+    required: true
+    visibile: true
+
+  compartment_ocid:
+    title: "Compartment"
+    description: "Choose Comparment for OCI Autonomous Database Serverless"
+    type: oci:identity:compartment:id
+    required: true
+    visibile: true 
+  
+  vault_id:
+    title: "OCI Vault OCID"
+    description: "Specify Oracle Cloud Infrastructure (OCI) Vault for encrypting the Serverless Autonomous Database's TDE wallet. "
+    type: string
+    required: true
+    visibile: true
+
+  kms_key_id:
+    title: "OCI Master Key OCID"
+    description: "Specify Oracle Cloud Identifier (OCID) of the master encryption key."
+    type: string
+    required: true
+    visibile: true
+
+  
