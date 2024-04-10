@@ -30,14 +30,14 @@ variables:
     visibile: false
 
   primary_region:
-    title: "Region"
+    title: "Primary Region"
     description: "Choose Primary Region for your OCI Autonomous Database Serverless"
     type: oci:identity:region:name
     required: true
     visibile: true
 
   standby_region:
-    title: "Region"
+    title: "Standby Region"
     description: "Choose Standby Region for your OCI Autonomous Database Serverless"
     type: oci:identity:region:name
     required: true
