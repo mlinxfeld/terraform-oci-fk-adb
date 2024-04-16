@@ -165,3 +165,7 @@ variable "refreshable_mode" {
 variable "remote_disaster_recovery_type" {
   default = ""  # Options: BACKUP_BASED, SNAPSHOT_STANDBY or ADG
 }
+
+variable "autonomous_database_backup_id" {
+  default = ""    
+}
