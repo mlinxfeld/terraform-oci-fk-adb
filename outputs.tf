@@ -10,9 +10,9 @@ output "adb_database" {
 
 output "adb_database_backup" {
    value = {
-     adb_database_id          = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup.autonomous_database_id : null
-     adb_database_backup_id   = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup.id : null
-     adb_database_backup_type = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup.type : null
+     adb_database_id          = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup[*].autonomous_database_id : null
+     adb_database_backup_id   = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup[*].id : null
+     adb_database_backup_type = var.adb_backup_enabled ? oci_database_autonomous_database_backup.fk_adb_database_backup[*].type : null
    } 
 }
 
