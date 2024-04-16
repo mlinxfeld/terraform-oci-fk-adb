@@ -24,5 +24,5 @@ module "oci-fk-adb-from-backup" {
   compartment_ocid                      = var.compartment_ocid
   adb_private_endpoint                  = false
   source_type                           = "BACKUP_FROM_ID"
-  autonomous_database_backup_id         = oci-fk-adb.adb_database_backup.adb_database_backup_id
+  autonomous_database_backup_id         = module.oci-fk-adb.adb_database_backup.adb_database_backup_id
 }
