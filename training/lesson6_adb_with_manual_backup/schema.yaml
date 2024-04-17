@@ -18,6 +18,7 @@ variableGroups:
   - compartment_ocid
   - adb_password
   - adb_backup_enabled
+  - adb_clone_from_backup
 
 variables:
 
@@ -59,3 +60,10 @@ variables:
     type: boolean
     required: true
     visibile: true 
+  
+  adb_clone_from_backup:
+    title: "Create clone from backup?"
+    description: "Decide if you want to create clone from the backup of OCI Autonomous Database Serverless"
+    type: boolean
+    required: true
+    visibile: true   

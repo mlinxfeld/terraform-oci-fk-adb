@@ -50,10 +50,12 @@ martin_lin@codeeditor:lesson6_adb_with_manual_backup (eu-frankfurt-1)$ cp terraf
 
 martin_lin@codeeditor:lesson6_adb_with_manual_backup (eu-frankfurt-1)$ vi terraform.tfvars
 
-tenancy_ocid       = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
-compartment_ocid   = "ocid1.compartment.oc1..<your_comparment_ocid>"
-region             = "<oci_region>"
-adb_password       = "<adb_password>"
+tenancy_ocid          = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
+compartment_ocid      = "ocid1.compartment.oc1..<your_comparment_ocid>"
+region                = "<oci_region>"
+adb_password          = "<adb_password>"
+adb_backup_enabled    = true # enables maunal long-term backup of ADB
+adb_clone_from_backup = false # turn to true to if you want to create a clone backup-based
 ```
 
 ### Initialize Terraform

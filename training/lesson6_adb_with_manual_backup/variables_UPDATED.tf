@@ -8,3 +8,6 @@ variable "adb_password" {}
 variable "adb_backup_enabled" {
   default = true
 }
+variable "adb_clone_from_backup" {
+  default = false
+}

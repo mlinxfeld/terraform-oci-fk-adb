@@ -10,3 +10,8 @@ compartment_ocid = "<compartment_ocid>"
 # ADB_password 
 adb_password = "<adb_password>"
 
+# ADB long-term manual backup
+adb_backup_enabled = true # enables maunal long-term backup of ADB
+
+# ADB clone from backup
+adb_clone_from_backup = false # turn to true to if you want to create a clone backup-based

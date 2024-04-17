@@ -14,6 +14,7 @@ module "oci-fk-adb" {
 }
 
 module "oci-fk-adb-clone-from-backup" {
+  count                                 = var.adb_clone_from_backup ? 1 : 0  
   source                                = "github.com/mlinxfeld/terraform-oci-fk-adb"
   adb_database_db_name                  = "FoggyKitchenADB2"
   adb_database_display_name             = "FoggyKitchenADB_CloneFromBackup"
