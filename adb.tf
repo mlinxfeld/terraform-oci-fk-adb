@@ -30,6 +30,7 @@ resource "oci_database_autonomous_database" "fk_adb_database" {
   clone_type                    = var.clone_type
   refreshable_mode              = var.refreshable_mode          
   remote_disaster_recovery_type = var.remote_disaster_recovery_type
+  autonomous_database_backup_id = var.autonomous_database_backup_id
 }
 
 resource "random_password" "wallet_password" {
