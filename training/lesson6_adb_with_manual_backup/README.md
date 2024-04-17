@@ -3,7 +3,7 @@
 
 ## LESSON 6 - Creating Autonomous DB Serverless with Manual Backup
 
-In this lesson, we'll focus on configuring an Autonomous Database with manual backup capabilities.
+In this lesson, we'll focus on configuring an Autonomous Database with manual backup capabilities, which will enable you to create backups on demand. These manual backups will serve as the foundation for creating clone Autonomous DB Instances, providing you with greater flexibility and control over your database environment.
 
 ![](lesson6_adb_with_manual_backup.png)
 
