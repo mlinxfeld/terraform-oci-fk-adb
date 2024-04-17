@@ -20,5 +20,6 @@ output "adb_database_network" {
    value = {
      adb_database_vcn_id      = (!var.use_existing_vcn && var.adb_private_endpoint) ? oci_core_vcn.fk_adb_vcn[*].id : null
      adb_database_subnet_id   = (!var.use_existing_vcn && var.adb_private_endpoint) ? oci_core_subnet.fk_adb_subnet[*].id : null
+     adb_database_nsg         = (!var.use_existing_vcn && var.adb_private_endpoint) ? oci_core_network_security_group.fk_adb_nsg[*].id : null
    } 
 }
