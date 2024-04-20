@@ -24,11 +24,11 @@ module "oci-fk-adb-clone" {
   adb_database_data_storage_size_in_tbs = 1
   compartment_ocid                      = var.compartment_ocid
   adb_private_endpoint                  = true
-  adb_private_endpoint_label            = "fkadbpec"
+  adb_private_endpoint_label            = "fkadbpefc"
   use_existing_vcn                      = true
-  vcn_id                                = module.oci-fk-adb.adb_database_network.adb_database_vcn_id[0]
-  adb_subnet_id                         = module.oci-fk-adb.adb_database_network.adb_database_subnet_id[0]
-  adb_nsg_id                            = module.oci-fk-adb.adb_database_network.adb_database_nsg[0]
+  vcn_id                                = module.oci-fk-adb-source.adb_database_network.adb_database_vcn_id[0]
+  adb_subnet_id                         = module.oci-fk-adb-source.adb_database_network.adb_database_subnet_id[0]
+  adb_nsg_id                            = module.oci-fk-adb-source.adb_database_network.adb_database_nsg[0]
   source_type                           = "DATABASE"
   source_id                             = module.oci-fk-adb-source.adb_database.adb_database_id
   clone_type                            = "FULL"
