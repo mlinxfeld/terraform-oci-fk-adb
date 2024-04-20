@@ -10,3 +10,5 @@ compartment_ocid = "<compartment_ocid>"
 # ADB_password 
 adb_password = "<adb_password>"
 
+# adb_refreshable_clone_enabled
+adb_refreshable_clone_enabled = false

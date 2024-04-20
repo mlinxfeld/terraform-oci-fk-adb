@@ -25,7 +25,7 @@ module "oci-fk-adb-clone-from-backup" {
   adb_database_data_storage_size_in_tbs = 1
   compartment_ocid                      = var.compartment_ocid
   adb_private_endpoint                  = true
-  adb_private_endpoint_label            = "fkadbpe2"
+  adb_private_endpoint_label            = "fkadbpe3"
   use_existing_vcn                      = true
   vcn_id                                = module.oci-fk-adb.adb_database_network.adb_database_vcn_id[0]
   adb_subnet_id                         = module.oci-fk-adb.adb_database_network.adb_database_subnet_id[0]

@@ -17,7 +17,8 @@ variableGroups:
   variables:
   - compartment_ocid
   - adb_password
-  - refreshable_mode
+  - adb_refreshable_mode
+  - adb_refreshable_clone_enabled
 
 variables:
 
@@ -53,7 +54,7 @@ variables:
     required: true
     visibile: true 
 
-  refreshable_mode:
+  adb_refreshable_mode:
     title: "Refreshable Mode"
     description: "Specify the mode of refreshable clone mode"
     type: enum
@@ -64,4 +65,10 @@ variables:
     required: true
     visibile: true
 
+  adb_refreshable_clone_enabled:
+    title: "Enable ADG Refreshable Clone?"
+    description: "Decide if you want to enable OCI Autonomous Database Serverless Refreshable Clone"
+    type: boolean
+    required: true
+    visibile: true     
   

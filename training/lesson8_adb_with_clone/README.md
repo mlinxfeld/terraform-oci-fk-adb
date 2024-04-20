@@ -50,10 +50,11 @@ martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ cp terraform.tfva
 
 martin_lin@codeeditor:lesson8_adb_with_clone (eu-frankfurt-1)$ vi terraform.tfvars
 
-tenancy_ocid       = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
-compartment_ocid   = "ocid1.compartment.oc1..<your_comparment_ocid>"
-region             = "<oci_region>"
-adb_password       = "<adb_password>"
+tenancy_ocid           = "ocid1.tenancy.oc1..<your_tenancy_ocid>"
+compartment_ocid       = "ocid1.compartment.oc1..<your_comparment_ocid>"
+region                 = "<oci_region>"
+adb_password           = "<adb_password>"
+adb_full_clone_enabled = false
 ```
 
 ### Initialize Terraform

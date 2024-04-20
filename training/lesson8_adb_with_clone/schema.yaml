@@ -17,6 +17,7 @@ variableGroups:
   variables:
   - compartment_ocid
   - adb_password
+  - adb_full_clone_enabled
 
 variables:
 
@@ -52,4 +53,9 @@ variables:
     required: true
     visibile: true 
 
-  
+  adb_full_clone_enabled:
+    title: "Enable ADG Full Clone?"
+    description: "Decide if you want to enable OCI Autonomous Database Serverless Full Clone"
+    type: boolean
+    required: true
+    visibile: true   
