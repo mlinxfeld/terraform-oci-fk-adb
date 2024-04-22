@@ -29,7 +29,7 @@ module "oci-fk-adb-remote-standby" {
   compartment_ocid                      = var.compartment_ocid
   use_existing_vcn                      = false
   adb_private_endpoint                  = true
-  adb_private_endpoint_label            = "fkadbpe2"
+  adb_private_endpoint_label            = "fkadbpes"
   source_id                             = module.oci-fk-adb-primary.adb_database.adb_database_id
   source_type                           = "CROSS_REGION_DISASTER_RECOVERY"
   remote_disaster_recovery_type         = "BACKUP_BASED"  
