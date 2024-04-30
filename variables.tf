@@ -173,3 +173,15 @@ variable "remote_disaster_recovery_type" {
 variable "autonomous_database_backup_id" {
   default = ""    
 }
+
+variable "adb_compute_model" {
+  default = "" # Options: null (cpuCoreCount > 0) vs ECPU (recommended) vs OCPU (legacy)
+}
+
+variable "adb_compute_count" {
+  default = "" # Options: null (cpu_core_count > 0) vs integer (min 2 when adb_compute_model = ECPU)
+}
+
+
+
+
