@@ -179,7 +179,7 @@ variable "adb_compute_model" {
 }
 
 variable "adb_compute_count" {
-  default = "" # Options: null (cpu_core_count > 0) vs integer (min 2 when adb_compute_model = ECPU)
+  default = 0 # Options: 0 (cpu_core_count > 0) vs integer (min 2 when adb_compute_model = ECPU)
 }
 
 
