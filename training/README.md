@@ -49,3 +49,7 @@ This lesson explores the essential techniques for setting up an Autonomous Datab
 [Lesson 11: Creating Autonomous DB Serverless with Remote Standby (DataGuard-based)](lesson11_adb_with_remote_data_guard)
 
 This lesson explores the essential techniques for setting up an Autonomous Database (ADB) with shared resources, focusing on the implementation of a remote standby database for disaster recovery utilizing DataGuard technology.  
+
+[Lesson 12: Creating Autonomous DB Serverless with ECPU Compute Model](lesson12_adb_with_ecpu_compute_model)
+
+In this lesson we delve into the realm of database management, focusing on the creation of Autonomous Database (ADB) Serverless instances using the ECPU (Elastic Compute Processing Unit) Compute Model. Throughout the lesson, participants will gain a comprehensive understanding of the ECPU Compute Model, its advantages, and its suitability for various database workloads. We explore the intricacies of configuring and deploying Autonomous Database instances in a serverless environment, emphasizing the flexibility, scalability, and cost-effectiveness it offers.
