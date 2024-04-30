@@ -8,7 +8,7 @@ resource "oci_database_autonomous_database" "fk_adb_database" {
   vault_id                            = var.use_oci_vault ? var.vault_id : null
   kms_key_id                          = var.use_oci_vault ? var.kms_key_id : null
   compartment_id                      = var.compartment_ocid
-  cpu_core_count                      = var.adb_compute_model == "ECPU" ? "" : var.adb_database_cpu_core_count
+  cpu_core_count                      = var.adb_compute_model == "ECPU" ? 0 : var.adb_database_cpu_core_count
   data_storage_size_in_tbs            = var.adb_database_data_storage_size_in_tbs
   db_name                             = var.adb_database_db_name
   db_version                          = var.adb_database_db_version
