@@ -96,7 +96,7 @@ variable "is_auto_scaling_enabled" {
   default = false
 }
 
-variable "is_auto_scaling_for_storage_enabled " {
+variable "is_auto_scaling_for_storage_enabled" {
   default = false
 }
 
