@@ -93,3 +93,13 @@ remote_disaster_recovery_type | configuration option applicable when source_type
 autonomous_database_backup_id | If the source is BACKUP_FROM_ID, you can provide the OCID of the autonomous database backup here.
 adb_compute_model | The compute model of the Autonomous Database (OCPU vs ECPU). 
 adb_compute_count | The compute amount available to the database. Minimum 2 when adb_compute_model equals to ECPU. 
+
+## Contributing
+This project is open source. Please submit your contributions by forking this repository and submitting a pull request! FoggyKitchen appreciates any contributions that are made by the open source community.
+
+## License
+Copyright (c) 2024 FoggyKitchen.com
+
+Licensed under the Universal Permissive License (UPL), Version 1.0.
+
+See [LICENSE](LICENSE) for more details.
