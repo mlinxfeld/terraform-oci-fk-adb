@@ -175,11 +175,11 @@ variable "autonomous_database_backup_id" {
 }
 
 variable "adb_compute_model" {
-  default = "" # Options: null (cpuCoreCount > 0) vs ECPU (recommended) vs OCPU (legacy)
+  default = "ECPU" # Options: null (cpuCoreCount > 0) vs ECPU (recommended) vs OCPU (legacy)
 }
 
 variable "adb_compute_count" {
-  default = 0 # Options: 0 (cpu_core_count > 0) vs integer (min 2 when adb_compute_model = ECPU)
+  default = 2 # Options: 0 (cpu_core_count > 0) vs integer (min 2 when adb_compute_model = ECPU)
 }
 
 
